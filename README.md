@@ -1,9 +1,9 @@
-Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />  
+Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics <img src="gaf/figures/st.jpeg" width="181px" align="right" />  
 ===========
 
 This repository includes the supplementary materials and code for the paper titled [Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics](). The research evaluates various methodologies in spatial transcriptomics, providing insights into their performance and offering recommendations for best practices in data analysis. Additionally, we present a Nextflow framework that serves as a baseline for future benchmarking efforts. This framework is highly adaptable and user-friendly, allowing for the seamless incorporation of new segmentation methods as they emerge in the field of spatial transcriptomics.
 
-Table of Contents
+Table of contents:
 - [Background](#background)
 - [Methods](#methods)
 - [Datasets](#datasets)
@@ -11,10 +11,6 @@ Table of Contents
 - [Results](#results)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Evaluation](#evaluation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 # Background
 Spatial transcriptomics has emerged as a pivotal technique for understanding tissue architecture and cellular interactions. However, the rapid development of various spatial transcriptomics methods necessitates rigorous benchmarking to guide researchers in selecting appropriate tools for their studies. This work systematically evaluates several spatial transcriptomics methods based on a variety of performance metrics.
@@ -32,7 +28,7 @@ The following methodologies were benchmarked:
 
 # Datasets
 Following datasets consist only on the formatted transcripts and images files, go to corresponding autor references for original datasets.
-| Dataset | Reference | Technology | scRNA-seq reference data used | Download data |
+| Dataset | Raw data link | Technology | scRNA-seq annotation reference data used | Download data |
 |    :---:    |    :---:    |    :---:    |    :---:    |    :---:    |
 | Brain | [MOSTA](https://db.cngb.org/stomics/mosta/download/) | StereoSeq | [Paper link](https://www.sciencedirect.com/science/article/pii/S0092867418308031) | [Transcripts and Image](https://figshare.com/s/bae16750c3e006eaccc8) |
 | Breast | [10x Genomics](https://www.nature.com/articles/s41467-023-43458-x) | Xenium | [Paper link](https://www.nature.com/articles/s41588-021-00911-1) | [Transcripts and Image](https://figshare.com/s/20c57a21ac44fd150034) |
