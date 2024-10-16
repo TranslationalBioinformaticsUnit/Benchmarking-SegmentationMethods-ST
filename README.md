@@ -37,7 +37,7 @@ Following datasets consist only on the formatted transcripts and images files, g
 | Pancreas | [Nanostring](https://nanostring.com/products/cosmx-spatial-molecular-imager/ffpe-dataset/cosmx-smi-human-pancreas-ffpe-dataset/) | CosMx | [Paper link](https://www.science.org/doi/10.1126/science.abl4896) | [Transcripts and Image](https://figshare.com/s/fc5beeb662a2ee1d455e) |
 
 # Evaluation
-The evaluation was performed using the five datasets presented. The metrics employed were derived from the [BIDCell proposed metrics](https://www.nature.com/articles/s41467-023-44560-w). You can find the [code for evaluation]() and visualization generation in this repository.
+The evaluation was performed using the five datasets presented. The metrics employed were derived from the [BIDCell proposed metrics](https://www.nature.com/articles/s41467-023-44560-w). You can find the [code for evaluation](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/Evaluation) and visualization generation in this repository.
 
 # Results
 The findings highlight significant differences in performance across the evaluated methods, influencing the choice of method based on specific research questions and data characteristics. Detailed results, including comparisons and statistical analyses, are provided in the [paper]().
