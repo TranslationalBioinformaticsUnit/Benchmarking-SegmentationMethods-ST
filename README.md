@@ -3,7 +3,7 @@ Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics
 
 This repository includes the supplementary materials and code for the paper titled [Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics](). The research evaluates various methodologies in spatial transcriptomics, providing insights into their performance and offering recommendations for best practices in data analysis. Additionally, we present a Nextflow framework that serves as a baseline for future benchmarking efforts. This framework is highly adaptable and user-friendly, allowing for the seamless incorporation of new segmentation methods as they emerge in the field of spatial transcriptomics.
 
-Table of Contents
+Table of contents:
 - [Background](#background)
 - [Methods](#methods)
 - [Datasets](#datasets)
