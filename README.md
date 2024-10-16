@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/1c6d8f6b-630a-4f0b-8291-153803e0f6bd)Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />  
+Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />  
 ===========
 
 This repository includes the supplementary materials and code for the paper titled [Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics](). The research evaluates various methodologies in spatial transcriptomics, providing insights into their performance and offering recommendations for best practices in data analysis. Additionally, we present a Nextflow framework that serves as a baseline for future benchmarking efforts. This framework is highly adaptable and user-friendly, allowing for the seamless incorporation of new segmentation methods as they emerge in the field of spatial transcriptomics.
