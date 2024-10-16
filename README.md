@@ -11,10 +11,6 @@ Table of Contents
 - [Results](#results)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Evaluation](#evaluation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 # Background
 Spatial transcriptomics has emerged as a pivotal technique for understanding tissue architecture and cellular interactions. However, the rapid development of various spatial transcriptomics methods necessitates rigorous benchmarking to guide researchers in selecting appropriate tools for their studies. This work systematically evaluates several spatial transcriptomics methods based on a variety of performance metrics.
