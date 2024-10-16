@@ -53,11 +53,11 @@ To run the code and reproduce the results, please ensure you have the following 
 In case you are interested in **running the Nextflow pipeline** (instead of a specific segmentation method) for running the corresponding scripts, ensure they are installed prior to run the Nextflow pipeline.
 
 # Usage
-[Running each segmentation method](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/Nextflow) is possible with [tool specific codes](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/src) provided in this repository.
+**Running each segmentation method**is possible with [tool specific codes](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/src) provided in this repository.
 
 The Nextflow pipeline provides a scalable and user-friendly framework for benchmarking segmentation methods. Expanding the pipeline is straightforward—simply create a new entry for the tool you wish to benchmark and integrate it into the Nextflow workflow.
 
-[Running the Nextflow]() is also simple, just follow this steps:
+[Running the Nextflow](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/Nextflow) is also simple, just follow this steps:
 - **Nextflow directory**: Clone the Nextflow directory provided in this repository.
 - **Change output directory**: Change the output directory where outcomes should be stored in main.nf file.
 - **Add input data**: Add to the input_data folder the two required files, the trsanscripts and the image.
