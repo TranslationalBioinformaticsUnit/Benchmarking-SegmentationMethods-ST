@@ -28,7 +28,7 @@ The following methodologies were benchmarked:
 
 # Datasets
 Following datasets consist only on the formatted transcripts and images files, go to corresponding autor references for original datasets.
-| Dataset | Raw data link | Technology | scRNA-seq annotaion reference data used | Download data |
+| Dataset | Raw data link | Technology | scRNA-seq annotation reference data used | Download data |
 |    :---:    |    :---:    |    :---:    |    :---:    |    :---:    |
 | Brain | [MOSTA](https://db.cngb.org/stomics/mosta/download/) | StereoSeq | [Paper link](https://www.sciencedirect.com/science/article/pii/S0092867418308031) | [Transcripts and Image](https://figshare.com/s/bae16750c3e006eaccc8) |
 | Breast | [10x Genomics](https://www.nature.com/articles/s41467-023-43458-x) | Xenium | [Paper link](https://www.nature.com/articles/s41588-021-00911-1) | [Transcripts and Image](https://figshare.com/s/20c57a21ac44fd150034) |
