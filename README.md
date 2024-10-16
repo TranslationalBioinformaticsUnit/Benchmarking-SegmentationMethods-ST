@@ -53,7 +53,7 @@ To run the code and reproduce the results, please ensure you have the following 
 In case you are interested in **running the Nextflow pipeline** (instead of a specific segmentation method) for running the corresponding scripts, ensure they are installed prior to run the Nextflow pipeline.
 
 # Usage
-**Running each segmentation method(https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/Nextflow)** is possible with [tool specific codes](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/src) provided in this repository.
+[Running each segmentation method](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/Nextflow) is possible with [tool specific codes](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/src) provided in this repository.
 
 The Nextflow pipeline provides a scalable and user-friendly framework for benchmarking segmentation methods. Expanding the pipeline is straightforward—simply create a new entry for the tool you wish to benchmark and integrate it into the Nextflow workflow.
 
