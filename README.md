@@ -1,7 +1,7 @@
 Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics <img src="gaf/figures/st.jpeg" width="181px" align="right" />  
 ===========
 
-This repository includes the supplementary materials and code for the paper titled [Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics](). The research evaluates various methodologies in spatial transcriptomics, providing insights into their performance and offering recommendations for best practices in data analysis. Additionally, we present a Nextflow framework that serves as a baseline for future benchmarking efforts. This framework is highly adaptable and user-friendly, allowing for the seamless incorporation of new segmentation methods as they emerge in the field of spatial transcriptomics.
+This repository includes the supplementary materials and code for the paper titled [Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics](). The research **evaluates various methodologies in spatial transcriptomics**, providing insights into their performance and offering recommendations for **best practices** in data analysis. Additionally, we present a **Nextflow framework** that serves as a baseline for future benchmarking efforts. This framework is **highly adaptable and user-friendly**, allowing for the seamless incorporation of new segmentation methods as they emerge in the field of spatial transcriptomics.
 
 Table of contents:
 - [Background](#background)
@@ -13,7 +13,7 @@ Table of contents:
 - [Usage](#usage)
 
 # Background
-Spatial transcriptomics has emerged as a pivotal technique for understanding tissue architecture and cellular interactions. However, the rapid development of various spatial transcriptomics methods necessitates rigorous benchmarking to guide researchers in selecting appropriate tools for their studies. This work systematically evaluates several spatial transcriptomics methods based on a variety of performance metrics.
+Spatial transcriptomics has emerged as a pivotal technique for understanding tissue architecture and cellular interactions. However, the rapid development of various spatial transcriptomics methods necessitates rigorous benchmarking to **guide researchers in selecting appropriate tools** for their studies. This work systematically evaluates several spatial transcriptomics methods based on a variety of performance metrics.
 
 # Methods
 The following methodologies were benchmarked:
@@ -40,7 +40,7 @@ Following datasets consist only on the formatted transcripts and images files, g
 The evaluation was performed using the five datasets presented. The metrics employed were derived from the [BIDCell proposed metrics](https://www.nature.com/articles/s41467-023-44560-w). You can find the [code for evaluation](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/Evaluation) and visualization generation in this repository.
 
 # Results
-The findings highlight significant differences in performance across the evaluated methods, influencing the choice of method based on specific research questions and data characteristics. Detailed results, including comparisons and statistical analyses, are provided in the [paper]().
+The findings highlight **significant differences in performance** across the evaluated methods, **influencing the choice of method** based on specific research questions and data characteristics. Detailed results, including comparisons and statistical analyses, are provided in the [paper]().
 
 # Installation
 To run the code and reproduce the results, please ensure you have the following conda environments installed:
