@@ -34,8 +34,8 @@ Following datasets consist only on the formatted transcripts and images files, g
 | Dataset | Raw data link | Technology | scRNA-seq annotation reference data used | Download data |
 |    :---:    |    :---:    |    :---:    |    :---:    |    :---:    |
 | Brain | [MOSTA](https://db.cngb.org/stomics/mosta/download/) | StereoSeq | [Paper link](https://www.sciencedirect.com/science/article/pii/S0092867418308031) | [Transcripts and Image](https://figshare.com/s/bae16750c3e006eaccc8) |
-| Brain | [MOSTA](https://zenodo.org/records/7332091) | STARmap PLUS | [Paper link](https://www.nature.com/articles/s41593-022-01251-x) | [Transcripts and Image](https://zenodo.org/records/7332091) |
-| Brain | [MOSTA](https://figshare.com/s/bae16750c3e006eaccc8) | MERFISH | [Paper link](https://www.nature.com/articles/s41586-021-03705-x) | [Transcripts and Image](https://figshare.com/s/bae16750c3e006eaccc8) |
+| Brain | [ZENODO](https://zenodo.org/records/7332091) | STARmap PLUS | [Paper link](https://www.nature.com/articles/s41593-022-01251-x) | [Transcripts and Image](https://zenodo.org/records/7332091) |
+| Brain | [FIGSHARE](https://figshare.com/s/bae16750c3e006eaccc8) | MERFISH | [Paper link](https://www.nature.com/articles/s41586-021-03705-x) | [Transcripts and Image](https://figshare.com/s/bae16750c3e006eaccc8) |
 | Breast | [10x Genomics](https://www.nature.com/articles/s41467-023-43458-x) | Xenium | [Paper link](https://www.nature.com/articles/s41588-021-00911-1) | [Transcripts and Image](https://figshare.com/s/20c57a21ac44fd150034) |
 | Embrio | [MOSTA](https://db.cngb.org/stomics/mosta/download/) | StereoSeq | [Paper link](https://www.nature.com/articles/s41586-019-0969-x) | [Transcripts and Image](https://figshare.com/s/b110c99ba8990031b793) |
 | Lung | [Nanostring](https://nanostring.com/products/cosmx-spatial-molecular-imager/ffpe-dataset/nsclc-ffpe-dataset/) | CosMx | [Paper link](https://www.nature.com/articles/s41588-022-01243-4) | [Transcripts and Image](https://figshare.com/s/a43bd679de1274f80e8a) |
