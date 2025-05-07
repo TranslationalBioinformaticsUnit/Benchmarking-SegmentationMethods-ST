@@ -50,9 +50,10 @@ The findings highlight **significant differences in performance** across the eva
 # Installation
 To run the code and reproduce the results, please ensure you have the following conda environments installed:
 
-- **SCS**: This conda environment is used for running SCS, Baysor and Watershed tools
-- **Cellpose**: This conda environment is used for running Cellpose
-- **BIDCell**: This conda environment is used for running BIDCell
+- **scs**: This conda environment is used for running SCS, Baysor and Watershed tools
+- **cellpose**: This conda environment is used for running Cellpose
+- **bidcell**: This conda environment is used for running BIDCell
+- **cellotype**: This conda environment is used for running CelloType
 - **Kernel**: This conda environment is used for running the evaluation
 
 In case you are interested in **running the Nextflow pipeline** (instead of a specific segmentation method) for running the corresponding scripts, ensure they are installed prior to run the Nextflow pipeline.
