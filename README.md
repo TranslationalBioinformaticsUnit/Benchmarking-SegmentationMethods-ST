@@ -1,4 +1,4 @@
-Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics <img src="gaf/figures/st.jpeg" width="181px" align="right" />  
+![image](https://github.com/user-attachments/assets/91b00c55-4555-451a-99a4-52882ec1daa9)![image](https://github.com/user-attachments/assets/87b4c5f4-fbbd-426c-93a6-e2c416476111)Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics <img src="gaf/figures/st.jpeg" width="181px" align="right" />  
 ===========
 
 This repository includes the supplementary materials and code for the paper titled [Unification and Benchmarking of Segmentation Methods for Spatial Transcriptomics](). The research **evaluates various methodologies in spatial transcriptomics**, providing insights into their performance and offering recommendations for **best practices** in data analysis. Additionally, we present a **Nextflow framework** that serves as a baseline for future benchmarking efforts. This framework is **highly adaptable and user-friendly**, allowing for the seamless incorporation of new segmentation methods as they emerge in the field of spatial transcriptomics.
@@ -34,6 +34,8 @@ Following datasets consist only on the formatted transcripts and images files, g
 | Dataset | Raw data link | Technology | scRNA-seq annotation reference data used | Download data |
 |    :---:    |    :---:    |    :---:    |    :---:    |    :---:    |
 | Brain | [MOSTA](https://db.cngb.org/stomics/mosta/download/) | StereoSeq | [Paper link](https://www.sciencedirect.com/science/article/pii/S0092867418308031) | [Transcripts and Image](https://figshare.com/s/bae16750c3e006eaccc8) |
+| Brain | [MOSTA](https://zenodo.org/records/7332091) | STARmap PLUS | [Paper link](https://www.nature.com/articles/s41593-022-01251-x) | [Transcripts and Image](https://zenodo.org/records/7332091) |
+| Brain | [MOSTA](https://figshare.com/s/bae16750c3e006eaccc8) | MERFISH | [Paper link](https://www.nature.com/articles/s41586-021-03705-x) | [Transcripts and Image](https://figshare.com/s/bae16750c3e006eaccc8) |
 | Breast | [10x Genomics](https://www.nature.com/articles/s41467-023-43458-x) | Xenium | [Paper link](https://www.nature.com/articles/s41588-021-00911-1) | [Transcripts and Image](https://figshare.com/s/20c57a21ac44fd150034) |
 | Embrio | [MOSTA](https://db.cngb.org/stomics/mosta/download/) | StereoSeq | [Paper link](https://www.nature.com/articles/s41586-019-0969-x) | [Transcripts and Image](https://figshare.com/s/b110c99ba8990031b793) |
 | Lung | [Nanostring](https://nanostring.com/products/cosmx-spatial-molecular-imager/ffpe-dataset/nsclc-ffpe-dataset/) | CosMx | [Paper link](https://www.nature.com/articles/s41588-022-01243-4) | [Transcripts and Image](https://figshare.com/s/a43bd679de1274f80e8a) |
