@@ -25,12 +25,17 @@ The following methodologies were benchmarked:
 - **BIDCell**: BidCell features a self-supervised deep learning framework with a Bidirectional U-Net3+ architecture that leverages biological insights to accurately segment cells in subcellular spatial transcriptomics without the need for manual annotations.
 - **SAM**: The Segment Anything Model (SAM) utilizes a Vision Transformer to perform real-time, prompt-based segmentation across diverse tasks, expanding its training dataset through a cycle of model-assisted data annotation for enhanced robustness.
 - **SAM2**: SAM2 builds upon the original SAM framework, incorporating streaming memory and iterative prompting capabilities for effective video and image segmentation, allowing for real-time object tracking and improved accuracy across complex content.
+- **mSAM**: mSAM extends the Segment Anything Model (SAM) to multidimensional microscopy data with enhanced segmentation for light and electron microscopy.
+It uses fine-tuned SAM models to compute image embeddings and applies automatic mask generation for accurate cell delineation.
+- **CelloType**: CelloType is a transformer-based model combining Swin Transformer and MaskDINO for joint cell segmentation and classification. It processes microscopy images to generate instance masks with cell type labels using a pretrained model and GPU acceleration. Results are post-processed into coordinate-label files for reproducible analysis across multiple spatial transcriptomics datasets.
 
 # Datasets
 Following datasets consist only on the formatted transcripts and images files, go to corresponding autor references for original datasets.
 | Dataset | Raw data link | Technology | scRNA-seq annotation reference data used | Download data |
 |    :---:    |    :---:    |    :---:    |    :---:    |    :---:    |
 | Brain | [MOSTA](https://db.cngb.org/stomics/mosta/download/) | StereoSeq | [Paper link](https://www.sciencedirect.com/science/article/pii/S0092867418308031) | [Transcripts and Image](https://figshare.com/s/bae16750c3e006eaccc8) |
+| Brain | [ZENODO](https://zenodo.org/records/7332091) | STARmap PLUS | [Paper link](https://www.nature.com/articles/s41593-022-01251-x) | [Transcripts and Image](https://zenodo.org/records/7332091) |
+| Brain | [Brain image library](https://doi.brainimagelibrary.org/doi/10.35077/g.21) | MERFISH | [Paper link](https://www.nature.com/articles/s41586-021-03705-x) | [Transcripts and Image](https://doi.brainimagelibrary.org/doi/10.35077/g.21) |
 | Breast | [10x Genomics](https://www.nature.com/articles/s41467-023-43458-x) | Xenium | [Paper link](https://www.nature.com/articles/s41588-021-00911-1) | [Transcripts and Image](https://figshare.com/s/20c57a21ac44fd150034) |
 | Embrio | [MOSTA](https://db.cngb.org/stomics/mosta/download/) | StereoSeq | [Paper link](https://www.nature.com/articles/s41586-019-0969-x) | [Transcripts and Image](https://figshare.com/s/b110c99ba8990031b793) |
 | Lung | [Nanostring](https://nanostring.com/products/cosmx-spatial-molecular-imager/ffpe-dataset/nsclc-ffpe-dataset/) | CosMx | [Paper link](https://www.nature.com/articles/s41588-022-01243-4) | [Transcripts and Image](https://figshare.com/s/a43bd679de1274f80e8a) |
@@ -45,9 +50,10 @@ The findings highlight **significant differences in performance** across the eva
 # Installation
 To run the code and reproduce the results, please ensure you have the following conda environments installed:
 
-- **SCS**: This conda environment is used for running SCS, Baysor and Watershed tools
-- **Cellpose**: This conda environment is used for running Cellpose
-- **BIDCell**: This conda environment is used for running BIDCell
+- **scs**: This conda environment is used for running SCS, Baysor and Watershed tools
+- **cellpose**: This conda environment is used for running Cellpose
+- **bidcell**: This conda environment is used for running BIDCell
+- **cellotype**: This conda environment is used for running CelloType
 - **Kernel**: This conda environment is used for running the evaluation
 
 In case you are interested in **running the Nextflow pipeline** (instead of a specific segmentation method) for running the corresponding scripts, ensure they are installed prior to run the Nextflow pipeline.
@@ -58,15 +64,18 @@ In case you are interested in **running the Nextflow pipeline** (instead of a sp
 The Nextflow pipeline provides a scalable and user-friendly framework for benchmarking segmentation methods. Expanding the pipeline is straightforward—simply create a new entry for the tool you wish to benchmark and integrate it into the Nextflow workflow.
 
 [Running the Nextflow](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/Nextflow) is also simple, just follow this steps:
+- **Conda environments**: Ensure you have required conda environments before running.
+- **Install Nextflow**: Install nextflow in you system [Nextflow installation guideline](https://www.nextflow.io/docs/latest/install.html) 
 - **Nextflow directory**: Clone the Nextflow directory provided in this repository.
 - **Change output directory**: Change the output directory where outcomes should be stored in main.nf file.
-- **Add input data**: Add to the input_data folder the two required files, the trsanscripts and the image.
+- **Add input data**: Add to the input_data folder (**"../nextflow/input_data/"**) the two required files, the **trsanscripts and the image**.
 - **Run the Nextflow**: Run the command 
       ```
       $ nextflow run .../nextflow/main.nf
       ```
 
-The pipeline will preprocess, generate the patches and run the added segmentation tools.
+The pipeline will preprocess, generate the patches and run the added segmentation tools 
+- Moddify "**../nextflow/main.nf**" to adapt any preprocessing step or the selection of segmentation tools.
 
 # Contributing
 Contributions to improve this repository are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.
