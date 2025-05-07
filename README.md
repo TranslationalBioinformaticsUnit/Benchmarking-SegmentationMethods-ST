@@ -74,7 +74,7 @@ The Nextflow pipeline provides a scalable and user-friendly framework for benchm
       ```
 
 The pipeline will preprocess, generate the patches and run the added segmentation tools 
-(moddify "**../nextflow/main.nf**" to adapt any preprocessing step or the selection of segmentation tools).
+- Moddify "**../nextflow/main.nf**" to adapt any preprocessing step or the selection of segmentation tools.
 
 # Contributing
 Contributions to improve this repository are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.
