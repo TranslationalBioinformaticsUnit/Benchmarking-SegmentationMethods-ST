@@ -32,27 +32,49 @@ library(ComplexHeatmap)
 library(circlize)
 theme_set(theme_bw())
 
+
+# Paths to input files
+path_to_annotation_worflow_from_ref_Rdata = "/ibex/user/iribarxm/spatial_transcriptomics/bidcell/BIDCell-main/breast_cancer_data/annotation_worflow_from_ref.Rdata"
+path_to_formated_transcripts = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/datasets/breast_data/breast_transcripts_formated_full.csv"
+path_to_watershed_segmentation_outcomes = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/watershed/results_breast_data"
+path_to_bidcell_segmentation_outcomes = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/bidcell/BIDCell-main/breast_cancer_data/output"
+path_to_cellpose_segmentation_outcomes = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/cellpose/results_breast_dataset"
+path_to_sam_segmentation_outcomes = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/sam/reformated_sam_output_breast_dataset"
+path_to_sam2_segmentation_outcomes = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/sam2/reformated_sam2_output_xenium_breast_dataset"
+path_to_scs_segmentation_outcomes = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/scs/path"
+path_to_scs_nucleus_segmentation_outcomes = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/scs/path"
+path_to_baysor_segmentation_outcomes = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/baysor/output_breast_dataset/reformated_output_breast"
+
+# Paths to output files
+path_output_files = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/valiadation/CellSPA_R_metrics/validation_outcomes"
+tissue_subpath = "/breast"
+
+#List of segmentation tools evaluated
+list_of_segmentation_tools = c("watershed","bidcell","cellpose","sam","sam2","baysor") 
+
+
+
 # STEPS
 
 # 1st
 # Load metadata
 
 # Breast dataset
-load("/ibex/user/iribarxm/spatial_transcriptomics/bidcell/BIDCell-main/breast_cancer_data/annotation_worflow_from_ref.Rdata")
+load(path_to_annotation_worflow_from_ref_Rdata)
 metadata = brain@meta.data
-metadata_coord = read.delim("/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/datasets/breast_data/breast_transcripts_formated_full.csv",sep=",")
+metadata_coord = read.delim(path_to_formated_transcripts,sep=",")
 
 # 2nd
 # Load data
 
 #Breast dataset
-df = read.delim("/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/datasets/breast_data/breast_transcripts_formated_full.csv",sep=",")
+df = read.delim(path_to_formated_transcripts,sep=",")
 df = df[,c(2,3,1,4,5)]
 colnames(df) = c("x","y","geneID","MIDCounts","cell_id")
 
 # 3rd 
 # Select tools outputs from: watershed/scs_nucleus/bidcell/cellpose/scs/sam/sam2
-list_of_tools = c("watershed","bidcell","cellpose","sam","sam2","baysor") 
+list_of_tools = list_of_segmentation_tools
 tool_used = "ST"
 
 # 4th
@@ -205,54 +227,52 @@ spe = calMarkerPct(spe, celltype = "mean_celltype_correlation", marker_list = po
 # Negative
 spe = calMarkerPct(spe, celltype = "mean_celltype_correlation", marker_list = negative_marker_list, marker_list_name = "negative")
 
-# TEMPORAL SAVE
-save.image("/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/valiadation/CellSPA_R_metrics/validation_outcomes/breast/temp_1.RData")
 
 # 6th
 # Load required package and map cell_id from global image reference to each patch cell_id segmented on each tool (done in parallel)
 process_paths = function(tool_used) {
     if (tool_used == "watershed"){
         #Breast
-        output_path = '/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/watershed/results_breast_data' #Breast
+        output_path = path_to_watershed_segmentation_outcomes #Breast
         output_paths = list.files(output_path, full.names = TRUE)
         output_paths = output_paths[grep("spot2nucl_", output_paths)]
     }
     if (tool_used == "bidcell"){
         #Breast
-        output_path = '/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/bidcell/BIDCell-main/breast_cancer_data/output'#Breast
+        output_path = path_to_bidcell_segmentation_outcomes #Breast
         output_paths = list.files(output_path, full.names = TRUE)
     }
     if (tool_used == "cellpose"){
         #Breast
-        output_path = '/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/cellpose/results_breast_dataset'#Breast
+        output_path = path_to_cellpose_segmentation_outcomes #Breast
         output_paths = list.files(output_path, full.names = TRUE)
         output_paths = output_paths[grep("\\.txt$", output_paths)]
     }
     if (tool_used == "sam"){
         #Breast
-        output_path = '/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/sam/reformated_sam_output_breast_dataset' #Breast
+        output_path = path_to_sam_segmentation_outcomes #Breast
         output_paths = list.files(output_path, full.names = TRUE)
     }
     if (tool_used == "sam2"){
         #Breast
-        output_path = '/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/sam2/reformated_sam2_output_xenium_breast_dataset' #Breast
+        output_path = path_to_sam2_segmentation_outcomes #Breast
         output_paths = list.files(output_path, full.names = TRUE)
     }
     if (tool_used == "scs"){
         #Breast
-        output_path = '/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/scs/path' #Breast
+        output_path = path_to_scs_segmentation_outcomes #Breast
         output_paths = list.files(output_path, full.names = TRUE)
         output_paths = output_paths[grep("spot2cell_", output_paths)]
     }
     if (tool_used == "scs_nucleus"){
         #Breast
-        output_path = '/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/scs/path' #Breast
+        output_path = path_to_scs_nucleus_segmentation_outcomes #Breast
         output_paths = list.files(output_path, full.names = TRUE)
         output_paths = output_paths[grep("spot2nucl_", output_paths)]
     }
     if (tool_used == "baysor"){
         #Breast
-        output_path = '/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/baysor/output_breast_dataset/reformated_output_breast' #Breast
+        output_path = path_to_baysor_segmentation_outcomes #Breast
         output_paths = list.files(output_path, full.names = TRUE)
     }
     return(output_paths)
@@ -428,8 +448,8 @@ for (tool in list_of_tools){
 }
 
 #Save files into path and create directory
-wd = "/ibex/scratch/projects/c2169/Xabier/spatial_transcriptomics/valiadation/CellSPA_R_metrics/validation_outcomes"
-dataset_folder_name = "/breast"
+wd = path_output_files
+dataset_folder_name = tissue_subpath
 
 output_path = paste0(wd, dataset_folder_name)
 
@@ -445,7 +465,7 @@ save.image(paste0(output_path, "/savepoint_1.RData"))
 ###
 ###
 #List of tools
-list_of_tools = c("watershed","bidcell","cellpose","sam","sam2","baysor") 
+list_of_tools = list_of_segmentation_tools
 
 # Loop through the list_of_tools desired
 for (tool in list_of_tools) {
@@ -561,7 +581,7 @@ save.image(paste0(output_path, "/savepoint_2.RData"))
 ## WORKING ON VISUALIZATION PART
 #load(paste0(output_path, "/savepoint_2.RData"))
 
-list_of_tools = c("watershed","bidcell","cellpose","sam","sam2","baysor") 
+list_of_tools = list_of_segmentation_tools
 
 # PLOTS PART 1 -OVERALL plots and Gene-level QC metrics-
 
