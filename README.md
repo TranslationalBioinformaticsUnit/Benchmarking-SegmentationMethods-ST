@@ -25,6 +25,9 @@ The following methodologies were benchmarked:
 - **BIDCell**: BidCell features a self-supervised deep learning framework with a Bidirectional U-Net3+ architecture that leverages biological insights to accurately segment cells in subcellular spatial transcriptomics without the need for manual annotations.
 - **SAM**: The Segment Anything Model (SAM) utilizes a Vision Transformer to perform real-time, prompt-based segmentation across diverse tasks, expanding its training dataset through a cycle of model-assisted data annotation for enhanced robustness.
 - **SAM2**: SAM2 builds upon the original SAM framework, incorporating streaming memory and iterative prompting capabilities for effective video and image segmentation, allowing for real-time object tracking and improved accuracy across complex content.
+- **mSAM**: mSAM extends the Segment Anything Model (SAM) to multidimensional microscopy data with enhanced segmentation for light and electron microscopy.
+It uses fine-tuned SAM models to compute image embeddings and applies automatic mask generation for accurate cell delineation.
+- **CelloType**: CelloType is a transformer-based model combining Swin Transformer and MaskDINO for joint cell segmentation and classification. It processes microscopy images to generate instance masks with cell type labels using a pretrained model and GPU acceleration. Results are post-processed into coordinate-label files for reproducible analysis across multiple spatial transcriptomics datasets.
 
 # Datasets
 Following datasets consist only on the formatted transcripts and images files, go to corresponding autor references for original datasets.
