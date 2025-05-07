@@ -64,6 +64,7 @@ In case you are interested in **running the Nextflow pipeline** (instead of a sp
 The Nextflow pipeline provides a scalable and user-friendly framework for benchmarking segmentation methods. Expanding the pipeline is straightforward—simply create a new entry for the tool you wish to benchmark and integrate it into the Nextflow workflow.
 
 [Running the Nextflow](https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/tree/main/Nextflow) is also simple, just follow this steps:
+- **Conda environments**: Ensure you have required conda environments before running.
 - **Install Nextflow**: Install nextflow in you system [Nextflow installation guideline](https://www.nextflow.io/docs/latest/install.html) 
 - **Nextflow directory**: Clone the Nextflow directory provided in this repository.
 - **Change output directory**: Change the output directory where outcomes should be stored in main.nf file.
